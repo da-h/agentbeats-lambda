@@ -68,7 +68,10 @@ class GenericAttackerExecutor(AgentExecutor):
     """Executor for generic OpenAI-based attacker agent"""
 
     def __init__(self, model: str = "gpt-4o-mini"):
-        self.client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = AsyncOpenAI(
+            api_key=os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("OPENAI_BASE_URL")  # None defaults to OpenAI API
+        )
         self.model = model
         self.system_prompt = GENERIC_ATTACKER_SYSTEM_PROMPT
         self.conversation_history = {}

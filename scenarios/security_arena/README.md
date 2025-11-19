@@ -193,6 +193,24 @@ All agents must use **gpt-oss-20b** (or equivalent open-source model).
 - Ensures fair compute resources across all teams
 - No proprietary API advantages
 
+### Local Model Serving
+
+All agents can share a single local model server. Set the `OPENAI_BASE_URL` environment variable to point to your server:
+
+```bash
+# Start vLLM server
+vllm serve gpt-oss-20b --port 8000
+
+# Configure agents
+export OPENAI_BASE_URL="http://localhost:8000/v1"
+export OPENAI_API_KEY="not-needed"  # Required but unused for local
+
+# Run scenario
+uv run agentbeats-run scenarios/security_arena/scenario_portfolioiq.toml
+```
+
+Both attacker and defender agents will connect to the same server. If `OPENAI_BASE_URL` is not set, agents default to the OpenAI API.
+
 ### Deliverables
 
 **Phase 1 Deliverables**:
