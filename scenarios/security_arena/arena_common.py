@@ -37,6 +37,7 @@ class RoundResult(BaseModel):
 
 class ArenaResult(BaseModel):
     """Complete result from arena evaluation"""
+    team_name: str | None = Field(default=None, description="Team that submitted the scenario")
     scenario_type: str = Field(description="Which scenario was tested")
     winner: str = Field(description="'attacker', 'defender', or 'none'")
     baseline_passed: bool = Field(description="Whether defender passed baseline test")
