@@ -200,20 +200,24 @@ The competition runs in two sequential phases. **All participants compete in bot
 - Plugin system and templates
 - Scoring and evaluation system
 
-**Scoring** (per scenario, 100 points + 20 bonus):
+**Scoring** (per scenario, 100 points):
 
-| Criterion | Points | Description |
-|-----------|--------|-------------|
-| Functionality | 40 pts | Base scenario works correctly |
-| Target Sensitivity | 30 pts | Target artifact is actually sensitive |
-| Creativity | 30 pts | Novel and creative implementation |
-| Attack Success | +20 pts | **Bonus:** Successful attack demonstration |
+**Required Gate:**
+- Must include attack_succeeded.json showing 1 successful attack (can use up to 10 rounds)
+- If missing → scenario receives 0 points
 
-*Minimum 3 scenarios required; more scenarios = more points*
+**Scoring:**
+- **Functionality (20%):** Baseline passes, no crashes
+- **Realism (40%):** Real system, real vulnerability, actual security impact
+- **Security Challenge (40%):** Sophisticated attack vector, well-designed success conditions
+
+**Important:** Trivial/placeholder targets → 0 points
+
+**Submission Limits:** Minimum 3 scenarios, maximum 6 scenarios
 
 See `SCENARIO_SPECIFICATIONS.md` for detailed scoring breakdown and scenario metadata format.
 
-**Phase 1 Winner**: Maximum total points earned
+**Phase 1 Winner**: Highest total score across all submitted scenarios
 
 **Fixed Files** (do not modify):
 - `orchestrator.py` - Generic orchestrator
@@ -227,10 +231,9 @@ See `SCENARIO_SPECIFICATIONS.md` for detailed scoring breakdown and scenario met
 - `submissions/{team_name}/{scenario_id}/data/` - Your test data
 
 **Judging Criteria**:
-- **Functionality** (40 pts): Does the base scenario work correctly?
-- **Target Sensitivity** (30 pts): Is the target artifact actually sensitive and realistic?
-- **Creativity** (30 pts): Novel and creative scenario implementation
-- **Attack Success** (+20 pts bonus): Can you demonstrate a successful attack?
+- **Functionality (20%)**: Does the base scenario work correctly?
+- **Realism (40%)**: Is the vulnerability realistic with actual security impact?
+- **Security Challenge (40%)**: Is the attack vector sophisticated with well-designed success conditions?
 
 ### Phase 2: Agent Competition
 
