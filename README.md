@@ -1,13 +1,69 @@
-## Lambda Labs Security Competition
+# Lambda × Berkeley AgentBeats Security Arena
 
-This fork includes the **Security Arena** framework for adversarial security testing competitions.
+**Building the Future of AI Security Testing**
 
-**[View Competition Documentation →](scenarios/security_arena/README.md)**
+Repository: https://github.com/LambdaLabsML/agentbeats-lambda
+
+## Track Description
+
+The Agent Security Arena challenges participants to advance the field of AI agent security evaluation. Implement realistic security scenarios from our curated library of 450+ specifications—testing vulnerabilities like prompt injection, data exfiltration, and jailbreaking—using an industry-standard adversarial testing framework. Your contributions will help define how we evaluate and secure AI agents operating in real-world environments, from financial advisors to healthcare systems.
+
+Browse the current scenario library on our [scenario browser](https://agentbeats-lambda.s3.us-east-1.amazonaws.com/index.html).
+
+## Competition Structure: Two Phases
+
+### Overview
+
+As AI agents gain autonomy and take on sensitive tasks, current security testing methods fall short. The Agent Security Arena provides a framework for testing AI vulnerabilities through realistic adversarial scenarios. The competition runs in two sequential phases; all participants compete in both.
+
+- **Phase 1 (November 24 – January 5)**: Implement security scenarios that test real vulnerabilities.
+- **Phase 2 (January 19 – February 23)**: Compete with advanced attack or defense agents.
+
+This track focuses on building realistic test scenarios that reveal actual vulnerabilities before they're exploited in production. Participants will balance creating challenging attack scenarios while maintaining clear success criteria and realistic constraints.
+
+### Key Dates
+
+| Date | Milestone |
+|------|-----------|
+| Nov 24, 2024 | Phase 1 begins - Start building scenarios |
+| Jan 5, 2025 | Phase 1 submissions due |
+| Jan 19, 2025 | Phase 2 begins - Agent competition launches |
+| Feb 23, 2025 | Winners announced |
+
+### Model Constraint
+
+**Use gpt-oss-20b** to ensure fair compute (fits in 80GB H100); no proprietary API advantage.
+
+## Getting Started
+
+**[View Full Competition Documentation →](scenarios/security_arena/README.md)**
 
 Quick start:
 ```bash
 uv run agentbeats-run scenarios/security_arena/scenario_portfolioiq.toml
 ```
+
+### Documentation
+
+Study existing examples:
+- **PortfolioIQ** — Data injection in financial risk assessment
+  `scenarios/security_arena/plugins/portfolioiq.py`
+- **Thingularity** — Information disclosure from shopping assistant
+  `scenarios/security_arena/plugins/thingularity.py`
+
+Core docs:
+- `README.md` - Framework architecture and usage
+- `SCENARIO_SPECIFICATIONS.md` - Plugin interface and submission requirements
+
+## Support
+
+Lambda engineers have set up dedicated support for participants:
+
+- **Discord**: Support channel
+- **GitHub Issues**: Bug reports and technical questions
+- **Response Time**: Critical issues same-day; general questions within 24 hours
+
+We're committed to helping you succeed - ask us anything about the framework, scenario implementation, or evaluation criteria.
 
 ---
 

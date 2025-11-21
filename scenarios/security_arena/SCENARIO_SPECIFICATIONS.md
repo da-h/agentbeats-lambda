@@ -2,6 +2,8 @@
 
 This document defines the metadata Lambda provides for each scenario and the submission requirements for participants.
 
+Browse the full library of **450+ security scenario specifications** at: https://agentbeats-lambda.s3.us-east-1.amazonaws.com/index.html
+
 ---
 
 ## Lambda-Provided Scenario Specifications
@@ -124,12 +126,12 @@ cmd = "python scenarios/security_arena/orchestrator.py --host 127.0.0.1 --port 9
 [[participants]]
 role = "attacker"
 endpoint = "http://127.0.0.1:9021"
-cmd = "python scenarios/security_arena/agents/generic_attacker.py --host 127.0.0.1 --port 9021"
+cmd = "python scenarios/security_arena/agents/generic_attacker.py --host 127.0.0.1 --port 9021 --model openai/gpt-oss-20b"
 
 [[participants]]
 role = "defender"
 endpoint = "http://127.0.0.1:9020"
-cmd = "python scenarios/security_arena/agents/generic_defender.py --host 127.0.0.1 --port 9020"
+cmd = "python scenarios/security_arena/agents/generic_defender.py --host 127.0.0.1 --port 9020 --model openai/gpt-oss-20b"
 
 [config]
 scenario_type = "{scenario_id}"
