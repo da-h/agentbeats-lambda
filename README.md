@@ -26,8 +26,8 @@ This track focuses on building realistic test scenarios that reveal actual vulne
 | Date | Milestone |
 |------|-----------|
 | Nov 24, 2024 | Phase 1 begins - Start building scenarios |
-| Jan 5, 2025 | Phase 1 submissions due |
-| Jan 19, 2025 | Phase 2 begins - Agent competition launches |
+| Jan 16, 2025 | Phase 1 submissions due |
+| Feb 2 , 2025 | Phase 2 begins - Agent competition launches |
 | Feb 23, 2025 | Winners announced |
 
 ### Model Constraint
